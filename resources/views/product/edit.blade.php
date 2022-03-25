@@ -18,19 +18,21 @@
                         <a href="{{route("product.index")}}" class="btn btn-primary lg">Back</a>
                     </div>
                     <div class="card-body">
-                      <form action="{{route("product.update", ["product"= $product->id])}}" method="post" enctype="multipart/form-data">
+                      <form action="{{route("product.update", ["product"=> $product->id])}}" method="post" enctype="multipart/form-data">
+                        @method('PUT')
                           @csrf
+
                           <div class="form-group">
                               <label for="name">Product Name</label>
                               <input id="name" class="form-control" type="text" name="name" value="{{$product->name}}">
                           </div>
                           <div class="form-group mt-3">
                               <label for="price">Price</label>
-                              <input id="price" class="form-control" type="number" name="price" value="{{$product->name}}">
+                              <input id="price" class="form-control" type="number" name="price" value="{{$product->price}}">
                           </div>
                           <div class="form-group mt-3">
                               <label for="description">Description</label>
-                              <input id="description" class="form-control" type="text" name="description" value="{{$product->name}}">
+                              <input id="description" class="form-control" type="text" name="description" value="{{$product->description}}">
                           </div>
                           <div class="form-group mt-3">
                               <label for="image">Image</label>

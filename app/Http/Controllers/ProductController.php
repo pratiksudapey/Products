@@ -82,7 +82,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        return(view('product.edit'));
+        $product = Product::find($id);
+        return(view('product.edit', compact("product")));
     }
 
     /**
@@ -117,7 +118,7 @@ class ProductController extends Controller
               $product->image = "/images/" . $newName;
           }
           $product->save();
-          return redirect()->back();
+          return redirect()->route('product.index');
     }
 
     /**
