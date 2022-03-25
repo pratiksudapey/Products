@@ -21,7 +21,6 @@
                       <form action="{{route("product.update", ["product"=> $product->id])}}" method="post" enctype="multipart/form-data">
                         @method('PUT')
                           @csrf
-
                           <div class="form-group">
                               <label for="name">Product Name</label>
                               <input id="name" class="form-control" type="text" name="name" value="{{$product->name}}">
@@ -42,12 +41,8 @@
                       </form>
                     </div>
                 </div>
-
             </div>
           </div>
     </div>
-
-
-
 </body>
 </html>

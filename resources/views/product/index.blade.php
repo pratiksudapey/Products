@@ -49,9 +49,6 @@
                               </tr>
                             @endforeach
                             </tbody>
-                            {{-- <div class="center">
-                              {{ $data->links() }}
-                            </div> --}}
                           </table>
                     </div>
                 </div>
